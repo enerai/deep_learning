@@ -5,11 +5,11 @@ import scipy
 from PIL import Image
 from scipy import ndimage
 from lr_utils import load_dataset
-from sigmoid import *
-from initialize_with_zeros import *
-from propagate import *
-from optimize import *
-from predict import *
+from sigmoid import sigmoid
+from initialize_with_zeros import initialize_with_zeros
+from propagate import propagate
+from optimize import optimize
+from predict import predict
 
 def model(X_train, Y_train, X_test, Y_test, num_iterations, learning_rate, print_cost):
     """
