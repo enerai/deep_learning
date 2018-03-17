@@ -1,3 +1,5 @@
+import numpy as np
+
 def compute_cost(A2, Y, parameters):
     """
     Computes the cross-entropy cost (objective value of logistic regression)
