@@ -1,3 +1,5 @@
+import numpy as np
+
 def initialize_parameters(n_x, n_h, n_y):
     """
     Argument:
