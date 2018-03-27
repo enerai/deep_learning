@@ -15,6 +15,8 @@ from keras.initializers import glorot_uniform
 import scipy.misc
 from matplotlib.pyplot import imshow
 %matplotlib inline
+from identity_block import identity_block
+from convolutional_block import convolutional_block
 
 import keras.backend as K
 K.set_image_data_format('channels_last')
