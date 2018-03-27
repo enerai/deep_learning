@@ -15,7 +15,30 @@ from keras.initializers import glorot_uniform
 import scipy.misc
 from matplotlib.pyplot import imshow
 %matplotlib inline
+from ResNet50 import ResNet50
+from identity_block import identity_block
+from convolutional_block import convolutional_block
 
 import keras.backend as K
 K.set_image_data_format('channels_last')
 K.set_learning_phase(1)
+
+model = ResNet50(input_shape = (64, 64, 3), classes = 6)
+
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+
+X_train_orig, Y_train_orig, X_test_orig, Y_test_orig, classes = load_dataset()
+
+# Normalize image vectors
+X_train = X_train_orig/255.
+X_test = X_test_orig/255.
+
+# Convert training and test labels to one hot matrices
+Y_train = convert_to_one_hot(Y_train_orig, 6).T
+Y_test = convert_to_one_hot(Y_test_orig, 6).T
+
+model.fit(X_train, Y_train, epochs = 2, batch_size = 32)
+
+preds = model.evaluate(X_test, Y_test)
+print ("Loss = " + str(preds[0]))
+print ("Test Accuracy = " + str(preds[1]))
