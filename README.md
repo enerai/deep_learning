@@ -5,4 +5,4 @@
 * /gradient_checking/: achieve the numerical gradient checking for a specific deep neural network (3-layers)
 * /signs_recognition/: signs (about single nubmers) recognition: three-layer ConvNet (CONV2D -> RELU -> MAXPOOL -> CONV2D -> RELU -> MAXPOOL -> FLATTEN -> FULLYCONNECTED), 1080 training examples, 120 test examples
 * /residual_networks/: achieve the signs recognition again, using 50-layer residual networks by Keras under TensorFlow.
-* /recurrent_neural_networks/: generate Dinosaurs name by RNN
+* /recurrent_neural_networks/: generate dinosaurs names by RNN
