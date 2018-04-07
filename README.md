@@ -7,4 +7,4 @@
 * /residual_networks/: achieve the signs recognition again, using 50-layer residual networks by Keras under TensorFlow.
 * /recurrent_neural_networks/: generate dinosaurs names by RNN
 * /word_analogies/: use pre-trained word embedding matrix for word analogies (glove6b50d dataset)
-* /emoji_prediction/: use LSTM and pre-trained word embedding for adding emoji for sentences. (Embedding -> LSTM -> Dropout -> LSTM -> Dense -> Softmax; word embedding from glove6b50d dataset)
+* /emoji_prediction/: use LSTM and pre-trained word embedding for adding emoji for sentences. (Embedding -> LSTM -> Dropout -> LSTM -> Dropout -> Softmax; word embedding from glove6b50d dataset)
