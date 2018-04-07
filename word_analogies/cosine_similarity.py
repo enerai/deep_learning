@@ -14,14 +14,14 @@ def cosine_similarity(u, v):
     
     distance = 0.0
     
-    # Compute the dot product between u and v (≈1 line)
+    # Compute the dot product between u and v
     dot = np.dot(u.T,v)
-    # Compute the L2 norm of u (≈1 line)
+    # Compute the L2 norm of u
     norm_u = np.sqrt(np.sum(np.square(u)))
     
-    # Compute the L2 norm of v (≈1 line)
+    # Compute the L2 norm of v
     norm_v = np.sqrt(np.sum(np.square(v)))
-    # Compute the cosine similarity defined by formula (1) (≈1 line)
+    # Compute the cosine similarity
     cosine_similarity = dot / (norm_u*norm_v)
     #print(dot.shape,norm_u.shape,norm_v.shape)
     
